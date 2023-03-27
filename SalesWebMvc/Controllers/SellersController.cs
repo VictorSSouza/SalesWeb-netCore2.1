@@ -50,7 +50,6 @@ namespace SalesWebMvc.Controllers
             }
 
             return View(seller);
-
         }
         
         [HttpPost]
@@ -59,6 +58,21 @@ namespace SalesWebMvc.Controllers
         {
             _sellersService.Remove(id); //Remove o seller pela id
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Details(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var seller = _sellersService.FindById(id.Value);
+            if(seller == null)
+            {
+                return NotFound();
+            }
+
+            return View(seller);
         }
     }
 }
