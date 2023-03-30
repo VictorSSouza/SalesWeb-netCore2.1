@@ -17,7 +17,7 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Projeto Sales Web MVC em netCore 2.1.";
+            ViewData["Message"] = "Project Sales Web MVC in netCore 2.1.";
             ViewData["DevName"] = "Victor Francisco Santos de Souza";
 
             return View();
@@ -25,7 +25,7 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "My contact page.";
 
             return View();
         }
