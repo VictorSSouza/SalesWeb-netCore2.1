@@ -32,7 +32,6 @@ namespace SalesWebMvc.Models
         public Department Department { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
-        [StringLength(7, MinimumLength = 6)]
         [Display(Name = "Seller Status")]
         public SellerStatus SellerStatus { get; set; }
 
