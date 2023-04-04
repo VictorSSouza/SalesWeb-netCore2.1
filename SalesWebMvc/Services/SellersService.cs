@@ -28,7 +28,8 @@ namespace SalesWebMvc.Services
         }
         public async Task<Seller> FindByIdAsync(int id) // Procura a Id no bd
         {
-            return await _context.Seller.Include(obj => obj.Department)
+            return await _context.Seller
+                    .Include(obj => obj.Department)
                    .FirstOrDefaultAsync(obj => obj.Id == id); 
         }
         public async Task RemoveAsync(int id)
